@@ -1,0 +1,526 @@
+body {
+  font-family: 'Alkalami', serif;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 98;
+  padding: 0;
+}
+
+#toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 99;
+}
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background: #ff3a00;
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+#toggle::after{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background: #ff3a00;
+  transition: 0.2s;
+  box-shadow: 0 12px #ff3a00;
+}
+#toggle.active::before {
+  transform: translate(0px) rotate(45deg);
+}
+#toggle.active::after {
+  transform: translate(0px) rotate(-45deg);
+  box-shadow: none;
+}
+#navbar {
+  position: relative;
+  height: 60px;
+  background: #fff;
+  transition: 0.5s;
+  overflow: hidden;
+  text-align: center;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+#navbar ul li {
+  display: inline-block;
+}
+#navbar ul li a {
+  color: #12334e;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 15px;
+  letter-spacing: 2px;
+}
+#navbar ul li a:hover {
+  color: #ff3a00;
+}
+/* Nav bar ends here*/
+.topside {
+  padding-top: 200px;
+  background-image: url(../img/background1.jpg);
+  width: 100%;
+  background-size: cover;
+  height: 800px;
+}
+.topside .break-fast .card {
+  background: none;
+  border: 6px solid #ff3a00;
+  width: 30%;
+  text-align: center;
+}
+.topside .break-fast .card  h2 {
+  color: #ff3a00;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.topside .break-fast .card  p {
+  color: #fff;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.topside .break-fast .card  a {
+  color: #ff3a00;
+  font-weight: 600;
+  margin: 10px 0;
+  display: block;
+  transition: 0.5s;
+}
+.topside .break-fast .card  a:hover {
+  color: #fff;
+}
+.topside .healthy-recipes .card {
+  background: #ff3a00;
+  border: 6px solid #ffffff;
+  width: 30%;
+  text-align: center;
+  margin-top: 50px;
+}
+.topside .healthy-recipes .card  h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.topside .healthy-recipes .card  p {
+  color: #fff;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.topside .healthy-recipes .card  a {
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 0;
+  display: block;
+  transition: 0.5s;
+}
+.topside .healthy-recipes .card  a:hover {
+  color: #fff;
+}
+/* healthy recipes ends here*/
+.position-color {
+  background-image: linear-gradient(35deg, #f7e3e3,#ff3a00);
+  width: 100%;
+  height: 300px;
+  position: relative;
+ }
+ .circle-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(35deg, #ff3c00,#ffffff);
+  position: absolute;
+  top: 50px;
+  right: 100px;
+ }
+/* position color ends here*/
+.about {
+  background-image: url(../img/background2.jpg);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: fixed;
+}
+.about .card {
+  background: #ff3a00;
+  border-radius: 30px;
+  border: 4px solid #fff;
+}
+.about .card h2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.about .card p {
+  color: #fff;
+  font-size: 16px;
+  width: 80%;
+  margin-top: 15px;
+}
+.about .card .btn {
+  color: #fff;
+  border: 2px solid #fff;
+  background: #f6673b;
+  margin: 30px 0;
+  font-weight: 600;
+}
+.about .card .btn:hover {
+  background-color: #fff;
+  color: #12334e;
+}
+/* About ends here*/
+.cookbook {
+  margin-top: 50px;
+}
+.cookbook h3 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #ff3a00;
+  text-align: center;
+}
+.cookbook .horizontal {
+  width: 250px;
+  height: 3px;
+  background-color: #ff3a00;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.cookbook p {
+  text-align: center;
+}
+.cookbook img {
+  width: 60%;
+  margin-top: 50px;
+  display: block;
+  margin: auto;
+}
+.cookbook .card {
+  margin-top: 80px;
+  border: none;
+}
+.cookbook .card h2 {
+  font-size: 25px;
+}
+.cookbook .card .clock .fa-regular {
+  font-size: 18px;
+}
+.cookbook .card .clock span {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.cookbook .card h4 {
+  font-size: 18px;
+}
+.cookbook .card h4 span {
+  text-decoration: line-through;
+}
+.cookbook .card h5 {
+  font-size: 18px;
+}
+.cookbook .card h5 span {
+  color: #ff3a00;
+}
+.cookbook .card h6 {
+  font-size: 18px;
+}
+.cookbook .card h6 span {
+  color: #AD0307;
+}
+.cookbook .card .text span {
+  color: #ff3a00;
+}
+.cookbook .card .btn {
+  background: #ff3a00;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  border: 1px solid #ff3a00;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.cookbook .card .btn:hover {
+  background: none;
+  color: #ff3a00;
+}
+/* Cook book ends here*/
+.brack {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(35deg, #ffffff, #ff3c00);
+  margin-top: 50px;
+}
+.service {
+  margin-top: 50px;
+}
+.service h2 {
+  font-size: 35px;
+  color: #ff3a00;
+  font-weight: 700;
+  text-align: center;
+}
+.service .horizontal {
+  width: 177px;
+  height: 3px;
+  background-color: #ff3a00;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.service .card {
+  border: 1px solid #ff3a00;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.service .card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  border: 2px solid #ff3a00;
+}
+.service .combination {
+  background-image: linear-gradient(35deg, #ff3a00, #f7e3e3);
+  color: #fff;
+}
+.service .text {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+ 
+}
+.service p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.service .btn {
+  text-align: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  background: #ff3a00;
+  padding: 15px;
+  border: 2px solid #ff3a00;
+  border-radius: 30px;
+  display: block;
+  margin: auto;
+  width: 20%;
+  margin-top: 40px;
+}
+.service .btn:hover {
+  background: none;
+  color: #ff3a00;
+}
+/* start contact area */
+.card-contact-area {
+  margin-top: 100px;
+}
+.card-contact-area .row input {
+  margin: 10px 0;
+}
+.card-contact-area .btn {
+  margin-right: 100px;
+  width: 100%;
+  background: #ff3a00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 60px;
+  border: 1px solid #ff3a00;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  transition: 0.5s;
+}
+.card-contact-area .btn:hover {
+  background: #fff;
+  color: #12334e;
+}
+.card-contact-area .contact h4 {
+  margin-bottom: -5px;
+  font-weight: bold;
+}
+.card-contact-area .contact p {
+  margin-bottom: -17px;
+}
+
+.card-contact-area .title{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.card-contact-area .title span {
+  font-size: 25px;
+  color: #ff3a00;
+}
+.card-contact-area h4 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.card-contact-area h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-contact-area .fas {
+  float: left;
+  font-size: 25px;
+  color: #ff3a00;
+  margin-right: 25px;
+}
+.card-contact-area p {
+  margin-left: 47px;
+}
+.card-contact-area .col-lg-6 {
+  margin-bottom: 70px;
+}
+.card-contact-area .name,
+.card-contact-area .address,
+.card-contact-area .mail {
+  margin-top: 25px;
+}
+
+
+/* Media query here*/
+@media (max-width: 1200px) {
+  .service .btn {
+    font-size: 16px;
+    width: 25%;
+  }
+}
+@media (max-width: 992px) {
+  #toggle {
+    display: block;
+  }
+  #toggle::before {
+    top: 30px;
+    left: 15px;
+  }
+  #toggle::after{
+    top: 30px;
+    left: 15px;
+  }
+  #navbar {
+    position: fixed;
+    left: -100%;
+    right: 100%;
+    width: 100%;
+    transition: 0.4s;
+    justify-content: center;
+    align-items: center;
+    background: #12334e;
+    height: calc(100vh - 60px);
+  }
+  #navbar.active {
+    height: calc(100vh - 60px);
+    left: 0;
+    width: 100%;
+  }
+  #navbar ul {
+    margin-top: 100px;
+  }
+  #navbar ul li {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+
+  }
+  #navbar ul li a {
+    color: #fff;
+  }
+  .topside .break-fast .card {
+    width: 50%;
+  }
+  .topside .healthy-recipes .card {
+    width: 50%;
+  }
+  .about .card h2 {
+    font-size: 30px;
+  }
+  .about .card p {
+    width: 100%;
+  }
+  .cookbook img {
+    width: 80%;
+  }
+  
+}
+.service .btn {
+  width: 30%;
+}
+@media (max-width: 768px) {
+  .service .btn {
+    width: 50%;
+  }
+  .cookbook .card {
+    text-align: center;
+  }
+}
+@media (max-width: 476px){
+  .topside .break-fast .card h2 {
+    font-size: 20px;
+  }
+  .topside .break-fast .card p {
+    width: 90%;
+    font-size: 14px;
+  }
+  .topside .break-fast .card a {
+    font-size: 14px;
+  }
+  .topside .healthy-recipes .card h2 {
+    font-size: 20px;
+  }
+  .topside .healthy-recipes .card p {
+    width: 90%;
+    font-size: 14px;
+  }
+  .topside .healthy-recipes .card a {
+    font-size: 14px;
+  }
+  
+}
+@media (max-width: 450px) {
+  .topside .break-fast .card {
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
+  .topside .healthy-recipes .card {
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .service .btn {
+    width: 70%;
+  }
+}
